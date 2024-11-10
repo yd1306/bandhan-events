@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANDHAN EVENTS</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(227, 92, 115);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .navbar-custom {
+            background-color: #333;
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #ffcc00;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .marquee-container {
+            background-color: rgb(255, 0, 0);
+            color: white;
+            font-family: 'Futura', sans-serif;
+            font-weight: bold;
+            padding: 10px 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .marquee-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll 15s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        h1 {
+            color: white;
+            font-family: 'Futura', sans-serif;
+        }
+
+        .event-card {
+            border: 5px solid white;
+            transition: transform 0.3s ease-in-out;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .event-card:hover {
+            transform: scale(1.05);
+        }
+
+        .event-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .event-card:hover .event-img {
+            transform: scale(1.1);
+        }
+
+        .review-carousel .carousel-item {
+            text-align: center;
+            color: white;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+        /* Smooth Scroll for Navbar */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Lazy Load Image */
+        .lazy {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .lazy-loaded {
+            opacity: 1;
+        }
+
+        /* Footer Design */
+        .footer-logo {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        /* Text Style for Event Names */
+        .event-card p {
+            color: #333;  /* Darker text color */
+            font-size: 1.2rem;  /* Slightly larger font for better readability */
+            background-color: rgba(255, 255, 255, 0.7);  /* Semi-transparent background */
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bandhan Events</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Marquee -->
+    <div class="marquee-container">
+        <div class="marquee-text">Bandhan Events - Making Your Celebrations Memorable - Book Your Event Now!</div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="home" class="container text-center mt-4">
+        <img src="img.png" alt="bandhan events" class="img-fluid lazy" style="max-width: 500px;" data-src="img.png">
+        <h1 class="mt-3"><u>Welcome to Bandhan Events</u></h1>
+        <p class="text-white">We specialize in creating unforgettable memories for your special occasions. Explore our event offerings below!</p>
+    </div>
+
+    <!-- Events Section -->
+    <div id="events" class="container text-center mt-5">
+        <h1><u>Our Events</u></h1>
+        <div class="row text-center mt-4">
+            <div class="col-md-4 col-sm-6 mb-3">
+                <div class="event-card">
+                    <img src="haldi.JPG" alt="Haldi Event" class="event-img lazy" data-src="haldi.JPG">
+                    <p>Haldi Ceremony</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-3">
+                <div class="event-card">
+                    <img src="mehndi.JPG" alt="Mehndi Event" class="event-img lazy" data-src="mehndi.JPG">
+                    <p>Mehndi Ceremony</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-3">
+                <div class="event-card">
+                    <img src="IMG_4362.JPG" alt="Shaadi Event" class="event-img lazy" data-src="IMG_4362.JPG">
+                    <p>Wedding Ceremony</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Client Reviews Section -->
+    <div id="reviews" class="container mt-5 text-center">
+        <h1 class="text-white"><u>Client Reviews</u></h1>
+        <div id="reviewCarousel" class="carousel slide mt-4" data-ride="carousel">
+            <div class="carousel-inner review-carousel">
+                <div class="carousel-item active">
+                    <p>"Bandhan Events made our day unforgettable!" - Client A</p>
+                </div>
+                <div class="carousel-item">
+                    <p>"Their attention to detail is remarkable." - Client B</p>
+                </div>
+                <div class="carousel-item">
+                    <p>"The best event management team we've ever worked with!" - Client C</p>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#reviewCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#reviewCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer Contact Section -->
+    <div id="contact" class="container text-center mt-5 mb-4">
+        <h1 class="text-white"><u>Contact Us</u></h1>
+        <p class="text-white">Email: contact@bandhanevents.com | Phone: +91 12345 67890</p>
+        <div class="social-icons">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">Twitter</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <img src="logo.png" alt="Bandhan Events Logo" class="footer-logo">
+            <p>&copy; 2023 Bandhan Events. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Lazy Load Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('.lazy');
+            const config = {
+                rootMargin: '0px 0px 200px 0px',
+                threshold: 0.01
+            };
+
+            let observer = new IntersectionObserver(function (entries, self) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        let image = entry.target;
+                        image.src = image.getAttribute('data-src');
+                        image.classList.add('lazy-loaded');
+                        self.unobserve(image);
+                    }
+                });
+            }, config);
+
+            images.forEach(function (image) {
+                observer.observe(image);
+            });
+        });
+    </script>
+</body>
+
+</html>
